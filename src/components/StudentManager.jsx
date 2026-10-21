@@ -1,5 +1,7 @@
 
 import { useState } from 'react'
+import Header from './Header'
+import Footer from './Footer'
 
 function StudentManager() {
 
@@ -59,6 +61,8 @@ function StudentManager() {
   }
 
   return (
+    <>
+    <Header/>
     <div className="card shadow-sm">
 
       <div className="card-body p-4">
@@ -255,6 +259,8 @@ function StudentManager() {
       </div>
 
     </div>
+    <Footer/>
+    </>
   )
 }
 

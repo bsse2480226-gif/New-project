@@ -6,14 +6,22 @@ import './App.css'
 import Hero from './components/Hero'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.bundle.min.js';
+import { Route, Routes } from 'react-router-dom'
+import StudentCard from './components/StudentCard'
+import StudentProfile from './components/StudentProfile'
+import StudentManager from './components/StudentManager'
 
 function App() {
-  const [count, setCount] = useState(0)
+  
 
   return (
     
     <>
-    <Hero/>
+    <Routes>
+      <Route path="/" element={<Hero />} />
+      <Route path="/Studentprofile" element={<StudentProfile />} />
+      <Route path='/Studentmanager' element={<StudentManager/>}/>
+    </Routes>
     </>
   )
 }

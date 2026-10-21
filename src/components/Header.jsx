@@ -2,7 +2,7 @@ function Header() {
   return (
     <nav className="navbar navbar-expand-lg navbar-light bg-dark">
       <div className="container-fluid">
-        <a className="navbar-brand text-white" href="#">Navbar</a>
+        <a className="navbar-brand text-white" href="/">Navbar</a>
         <button 
           className="navbar-toggler" 
           type="button" 
@@ -18,10 +18,13 @@ function Header() {
         <div className="collapse navbar-collapse" id="navbarSupportedContent">
           <ul className="navbar-nav me-auto mb-2 mb-lg-0">
             <li className="nav-item">
-              <a className="nav-link active text-white" aria-current="page" href="#">Home</a>
+              <a className="nav-link active text-white" aria-current="page" href="/">Home</a>
             </li>
             <li className="nav-item">
-              <a className="nav-link text-white" href="#">Link</a>
+              <a className="nav-link text-white" href="/Studentprofile">Student info</a>
+            </li>
+            <li className="nav-item">
+              <a className="nav-link text-white" href="/Studentmanager">Add Student</a>
             </li>
             <li className="nav-item dropdown">
               <a 

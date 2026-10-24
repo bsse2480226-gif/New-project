@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 
 export default function StudentCard({ id, name, email, major, gpa, phone }) {
   const [views, setViews] = useState(0);
@@ -63,6 +64,17 @@ export default function StudentCard({ id, name, email, major, gpa, phone }) {
             <div><strong>Phone:</strong> {phone}</div>
           </div>
         )}
+         <div className="mt-3">
+
+          <Link
+            to={`/studentview/${id}`}
+            state={{ id, name, email, major, gpa, phone }}  
+            className="btn btn-outline-primary"
+          >
+            Open Student Profile
+          </Link>
+
+        </div>
       </div>
     </div>
   );

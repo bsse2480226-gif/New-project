@@ -26,6 +26,9 @@ function Header() {
             <li className="nav-item">
               <a className="nav-link text-white" href="/Studentmanager">Add Student</a>
             </li>
+              <li className="nav-item">
+              <a className="nav-link text-white" href="/studentform">Student Form</a>
+            </li>
             <li className="nav-item dropdown">
               <a 
                 className="nav-link dropdown-toggle text-white" 

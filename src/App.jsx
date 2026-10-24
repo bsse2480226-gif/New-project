@@ -10,6 +10,8 @@ import { Route, Routes } from 'react-router-dom'
 import StudentCard from './components/StudentCard'
 import StudentProfile from './components/StudentProfile'
 import StudentManager from './components/StudentManager'
+import Studentview from './components/Studentview'
+import StudentForm from './components/StudentForm'
 
 function App() {
   
@@ -21,6 +23,8 @@ function App() {
       <Route path="/" element={<Hero />} />
       <Route path="/Studentprofile" element={<StudentProfile />} />
       <Route path='/Studentmanager' element={<StudentManager/>}/>
+      <Route path='/studentview/:id' element={<Studentview/>}/>
+      <Route path='/studentform' element={<StudentForm/>}/>
     </Routes>
     </>
   )

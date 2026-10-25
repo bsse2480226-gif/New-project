@@ -1,6 +1,6 @@
 function Header() {
   return (
-    <nav className="navbar navbar-expand-lg navbar-light bg-dark">
+    <nav className="navbar navbar-expand-lg navbar-light bg-success" style={{}}>
       <div className="container-fluid">
         <a className="navbar-brand text-white" href="/">Navbar</a>
         <button 
@@ -54,7 +54,7 @@ function Header() {
           
           <form className="d-flex" role="search">
             <input className="form-control me-2 text-white" type="search" placeholder="Search" aria-label="Search"/>
-            <button className="btn btn-outline-success" type="submit">Search</button>
+            <button className="btn btn-outline-dark" type="submit">Search</button>
           </form>
         </div>
       </div>

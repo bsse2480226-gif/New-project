@@ -31,8 +31,7 @@ export default function StudentForm() {
         event.preventDefault();
         seterror('');
         setSuccess('');
-
-        // Validation checks with 'return' to stop execution if an error is found
+      
         if (!formdata.name) {
             seterror("Please enter the name");
             return;
@@ -95,154 +94,77 @@ export default function StudentForm() {
                         <h2 className="mb-4">Student Registration</h2>
                         
                         <form onSubmit={handleSubmit}>
-                            
-                            {/* Full Name */}
+                        
                             <div className='mb-3'>
                                 <label className="form-label">Full Name</label>
-                                <input 
-                                    type="text" 
-                                    name="name" 
-                                    className='form-control' 
-                                    placeholder='Enter your name' 
-                                    value={formdata.name} 
-                                    onChange={handlechange} 
+                                <input type="text" name="name" className='form-control' placeholder='Enter your name' value={formdata.name} onChange={handlechange} 
                                 />
                             </div>
 
-                            {/* Email */}
                             <div className='mb-3'>
                                 <label className="form-label">Email</label>
-                                <input 
-                                    type="email" 
-                                    name="email" 
-                                    className='form-control' 
-                                    placeholder='Enter your email' 
-                                    value={formdata.email} 
-                                    onChange={handlechange} 
+                                <input type="email" name="email" className='form-control' placeholder='Enter your email' value={formdata.email} onChange={handlechange} 
                                 />
                             </div>
 
-                            {/* Phone */}
                             <div className='mb-3'>
                                 <label className="form-label">Phone Number</label>
-                                <input 
-                                    type="number" 
-                                    name="phone" 
-                                    className='form-control' 
-                                    placeholder='Enter your phone' 
-                                    value={formdata.phone} 
-                                    onChange={handlechange} 
+                                <input type="number" name="phone" className='form-control' placeholder='Enter your phone' value={formdata.phone} onChange={handlechange} 
                                 />
                             </div>
-                            
-                            {/* Program */}
+           
                             <div className="mb-3">
                                 <label className="form-label">Program</label>
-                                <select
-                                    name="program"
-                                    className="form-select"
-                                    value={formdata.program}
-                                    onChange={handlechange}
-                                >
-                                    <option value="">Select Program</option>
-                                    <option value="Computer Science">Computer Science</option>
-                                    <option value="Software Engineering">Software Engineering</option>
-                                    <option value="Information Technology">Information Technology</option>
+                                <select name="program" className="form-select" value={formdata.program} onChange={handlechange}
+                                > <option value="">Select Program</option> <option value="Computer Science">Computer Science</option> <option value="Software Engineering">Software Engineering</option> <option value="Information Technology">Information Technology</option>
                                 </select>
                             </div>
 
                             {/* Semester */}
                             <div className="mb-3">
                                 <label className="form-label">Semester</label>
-                                <select
-                                    name="semester"
-                                    className="form-select"
-                                    value={formdata.semester}
-                                    onChange={handlechange}
-                                >
-                                    <option value="">Select Semester</option>
-                                    <option value="1">Semester 1</option>
-                                    <option value="2">Semester 2</option>
-                                    <option value="3">Semester 3</option>
-                                    <option value="4">Semester 4</option>
-                                    <option value="5">Semester 5</option>
-                                    <option value="6">Semester 6</option>
-                                    <option value="7">Semester 7</option>
-                                    <option value="8">Semester 8</option>
+                                <select name="semester" className="form-select" value={formdata.semester} onChange={handlechange}
+                                > <option value="">Select Semester</option> 
+                                <option value="1">Semester 1</option> 
+                                <option value="2">Semester 2</option> 
+                                <option value="3">Semester 3</option> 
+                                <option value="4">Semester 4</option> 
+                                <option value="5">Semester 5</option> 
+                                <option value="6">Semester 6</option> 
+                                <option value="7">Semester 7</option> 
+                                <option value="8">Semester 8</option>
                                 </select>
                             </div>
                             
-                            {/* Gender */}
                             <div className="mb-3">
                                 <label className="form-label d-block">Gender</label>
-                                <div className="form-check form-check-inline">
-                                    <input
-                                        type="radio"
-                                        name="gender"
-                                        value="Male"
-                                        className="form-check-input"
-                                        checked={formdata.gender === 'Male'}
-                                        onChange={handlechange}
-                                    />
-                                    <label className="form-check-label">Male</label>
+                                <div className="form-check form-check-inline"> <input type="radio" name="gender" value="Male" className="form-check-input"     checked={formdata.gender === 'Male'}     onChange={handlechange} /> <label className="form-check-label">Male</label>
                                 </div>
-                                <div className="form-check form-check-inline">
-                                    <input
-                                        type="radio"
-                                        name="gender"
-                                        value="Female"
-                                        className="form-check-input"
-                                        checked={formdata.gender === 'Female'}
-                                        onChange={handlechange}
-                                    />
-                                    <label className="form-check-label">Female</label>
+                                <div className="form-check form-check-inline"> <input type="radio" name="gender" value="Female" className="form-check-input"     checked={formdata.gender === 'Female'}     onChange={handlechange} /> <label className="form-check-label">Female</label>
                                 </div>
                             </div>
 
-                            {/* Address */}
                             <div className="mb-3">
                                 <label className="form-label">Address</label>
-                                <textarea
-                                    name="address"
-                                    className="form-control"
-                                    rows="4"
-                                    placeholder="Enter your address"
-                                    value={formdata.address}
-                                    onChange={handlechange}
+                                <textarea name="address" className="form-control" rows="4" placeholder="Enter your address" value={formdata.address} onChange={handlechange}
                                 />
                             </div>
 
-                            {/* Terms */}
                             <div className="mb-3">
-                                <div className="form-check">
-                                    <input
-                                        type="checkbox"
-                                        name="terms"
-                                        className="form-check-input"
-                                        checked={formdata.terms}
-                                        onChange={handlechange}
-                                    />
-                                    <label className="form-check-label">
-                                        I agree to the terms and conditions.
-                                    </label>
+                                <div className="form-check"> <input type="checkbox" name="terms" className="form-check-input" checked={formdata.terms}     onChange={handlechange} /> <label className="form-check-label">     I agree to the terms and conditions. </label>
                                 </div>
                             </div>
 
-                            {/* Error Message */}
                             {error && (
-                                <div className="alert alert-danger">
-                                    {error}
+                                <div className="alert alert-danger"> {error}
                                 </div>
                             )}
 
-                            {/* Success Message */}
                             {success && (
-                                <div className="alert alert-success">
-                                    {success}
+                                <div className="alert alert-success"> {success}
                                 </div>
                             )}
 
-                            {/* Submit Button */}
                             <button type="submit" className="btn btn-primary">
                                 Register Student
                             </button>

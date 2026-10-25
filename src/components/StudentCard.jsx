@@ -6,7 +6,7 @@ export default function StudentCard({ id, name, email, major, gpa, phone }) {
   const [showDetails, setShowDetails] = useState(false);
 
   function handleView() {
-    setViews((prevViews) => prevViews + 1);
+    setViews(views + 1);
   }
 
   return (
@@ -57,7 +57,6 @@ export default function StudentCard({ id, name, email, major, gpa, phone }) {
           </button>
         </div>
 
-        {/* Conditional Expandable Details */}
         {showDetails && (
           <div className="mt-3 p-2 bg-light rounded text-start border small">
             <div className="text-truncate"><strong>Email:</strong> {email}</div>

@@ -62,7 +62,7 @@ function StudentManager() {
 
   return (
     <>
-
+   
     <div className="card shadow-sm">
 
       <div className="card-body p-4">
@@ -230,7 +230,7 @@ function StudentManager() {
       </div>
 
     </div>
-  
+ 
     </>
   )
 }

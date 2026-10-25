@@ -66,35 +66,19 @@ function StudentManager() {
     <div className="card shadow-sm">
 
       <div className="card-body p-4">
-
         <h2 className="mb-4">
           Student Manager
         </h2>
 
-
         {/* Add Student Form */}
-
         <form onSubmit={handleAddStudent}>
-
           {/* Name */}
-
           <div className="mb-3">
-
-            <label className="form-label">
-              Student Name
-            </label>
-
-            <input
-              type="text"
-              className="form-control"
-              placeholder="Enter student name"
-              value={name}
-              onChange={(event) => setName(event.target.value)}
-            />
+            <label className="form-label"> Name</label>
+            <input type="text" className="form-control"placeholder="Enter student name" value={name}
+              onChange={(event) => setName(event.target.value)}/>
 
           </div>
-
-
           {/* Department */}
 
           <div className="mb-3">
@@ -108,36 +92,25 @@ function StudentManager() {
               value={department}
               onChange={(event) => setDepartment(event.target.value)}
             >
-
               <option value="">
                 Select Department
               </option>
-
               <option value="Computer Science">
                 Computer Science
               </option>
-
               <option value="Software Engineering">
                 Software Engineering
               </option>
-
               <option value="Information Technology">
                 Information Technology
               </option>
-
             </select>
-
           </div>
-
-
           {/* Semester */}
-
           <div className="mb-3">
-
             <label className="form-label">
               Semester
             </label>
-
             <select
               className="form-select"
               value={semester}
@@ -200,8 +173,6 @@ function StudentManager() {
         <h4 className="mt-5 mb-3">
           Students
         </h4>
-
-
         {students.length === 0 ? (
 
           <div className="alert alert-warning">
